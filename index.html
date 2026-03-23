@@ -32,24 +32,18 @@
             theme: {
                 extend: {
                     colors: {
-                        festival: {
-                            magenta: '#880e4f', // Deep Vibrant Magenta
-                            royal: '#1a237e',  // Deep Royal Blue
-                            emerald: '#1b5e20', // Deep Emerald
-                            accent: '#e91e63'   // Bright Magenta accent
-                        },
                         royal: {
-                            950: '#1a000d',
-                            900: '#2a0212', 
-                            800: '#4a0421',
-                            700: '#63082e',
-                            600: '#880e4f', // Vibrant Magenta/Maroon
-                            100: '#f9ebeb'
+                            950: '#110000', // Deeper Maroon
+                            900: '#220000', 
+                            800: '#330000',
+                            700: '#440000',
+                            600: '#660000', // Rich Maroon Highlight
+                            100: '#fff5f5'
                         },
                         gold: {
                             300: '#f7e1a1',
                             400: '#d4af37',
-                            500: '#FFD700', // Brighter Gold
+                            500: '#FFD700', // Brighter Gold Luxe
                             600: '#b08d20',
                             glow: '#fff5b7'
                         },
@@ -126,28 +120,28 @@
 
         .curtain-panel {
             /* Realistic Velvet Texture using gradients for folds */
-            background-color: #880e4f; /* Vibrant Magenta */
+            background-color: #4a0404; /* Restored Rich Maroon */
             background-image:
                 /* Deep shadows for folds */
                 repeating-linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.4) 0%,
-                    rgba(0, 0, 0, 0.1) 15%,
-                    rgba(255, 255, 255, 0.1) 25%,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.2) 15%,
+                    rgba(255, 255, 255, 0.05) 25%,
                     /* Highlight */
-                    rgba(0, 0, 0, 0.1) 35%,
-                    rgba(0, 0, 0, 0.4) 50%),
+                    rgba(0, 0, 0, 0.2) 35%,
+                    rgba(0, 0, 0, 0.6) 50%),
                 /* Subtle pattern texture */
                 url('https://www.transparenttextures.com/patterns/arabesque.png');
             background-size: 100% 100%, 200px 200px;
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);
+            box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.9);
             transform-origin: top center;
             will-change: transform;
         }
 
         .curtain-hem {
-            /* Ornate Gold Border */
-            background: linear-gradient(to bottom, #d4af37, #FFD700, #d4af37);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            /* Ornate Gold Border - Metallic Lustre */
+            background: linear-gradient(to bottom, #b08d20, #FFD700, #b08d20);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
         }
 
         /* Ornate Gold border effect (Double Line) */
@@ -192,12 +186,12 @@
 
         /* Velvet Backdrop Gradient */
         .bg-velvet {
-            background: radial-gradient(circle at center, #880e4f 0%, #4a0421 60%, #1a000d 100%);
+            background: radial-gradient(circle at center, #660000 0%, #330000 60%, #110000 100%);
         }
 
-        /* Royal Blue Accent Sections */
-        .bg-royal-gradient {
-            background: linear-gradient(135deg, #1a237e 0%, #000051 100%);
+        /* Lustrous Gold Gradient */
+        .bg-gold-metallic {
+            background: linear-gradient(135deg, #b08d20 0%, #FFD700 50%, #b08d20 100%);
         }
     </style>
 </head>
@@ -276,7 +270,7 @@
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
                     class="w-full h-full object-cover opacity-30 scale-110 parallax-bg" alt="Wedding Background">
-                <div class="absolute inset-0 bg-gradient-to-b from-royal-950 via-festival-royal/40 to-royal-950"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-royal-950 via-transparent to-royal-950"></div>
             </div>
 
             <!-- Content -->
@@ -292,7 +286,7 @@
                     Together with our families</p>
 
                 <h1
-                    class="gsap-hero-reveal font-script text-7xl md:text-9xl mb-6 transform translate-y-10 opacity-0 gold-foil">
+                    class="gsap-hero-reveal font-script text-7xl md:text-9xl mb-6 transform translate-y-10 opacity-0 gold-foil drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]">
                     Gautham <span class="text-gold-500">&</span> Deekshitha
                 </h1>
 
@@ -316,7 +310,7 @@
         </section>
 
         <!-- Couple Story Section -->
-        <section class="py-32 bg-royal-gradient text-cream relative overflow-hidden">
+        <section class="py-32 bg-velvet text-cream relative overflow-hidden">
             <div class="corner-decor corner-tl"></div>
             <div class="corner-decor corner-tr"></div>
             <div class="corner-decor corner-bl"></div>
@@ -328,7 +322,7 @@
 
             <div class="container mx-auto px-6 relative z-10 transition-all duration-1000">
                 <div class="text-center mb-16">
-                    <h2 class="font-serif text-5xl md:text-7xl mb-6 section-title opacity-0 tracking-tight gold-foil">Our Story</h2>
+                    <h2 class="font-serif text-5xl md:text-7xl mb-6 section-title opacity-0 tracking-tight gold-foil drop-shadow-[0_0_10px_rgba(255,215,0,0.2)]">Our Story</h2>
                     <div class="w-48 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto rounded-full"></div>
                 </div>
 
@@ -370,7 +364,7 @@
 
         <!-- Wedding Timeline -->
         <section class="py-24 bg-royal-950 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-royal-950 via-festival-emerald/10 to-royal-950 opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-royal-950 via-gold-500/5 to-royal-950 opacity-20"></div>
             <div class="container mx-auto px-4">
                 <div class="text-center mb-20">
                     <h2 class="font-serif text-4xl md:text-5xl text-gold-400 mb-2 section-title opacity-0">Wedding
@@ -389,7 +383,7 @@
                     <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 timeline-item">
                         <div
                             class="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right pr-0 md:pr-12 pl-12 md:pl-0 order-1">
-                            <h3 class="font-serif text-4xl mb-2 gold-foil">The Engagement</h3>
+                            <h3 class="font-serif text-4xl mb-2 gold-foil drop-shadow-[0_0_8px_rgba(255,215,0,0.2)]">The Engagement</h3>
                             <p class="font-sans text-gold-200 text-xl mb-1">Jan 4, 2026 | 10:00 AM</p>
                             <p class="text-cream opacity-80 text-sm">Narayana Guru Kalyana Mantap, Hiriadka</p>
                             <p class="text-xs text-gold-600 mt-2 uppercase tracking-[0.2em] font-bold">Ring Ceremony</p>
@@ -440,7 +434,7 @@
                             <p class="text-xs text-gold-500 mt-2 uppercase tracking-[0.2em] font-bold">Holy Pheras</p>
                         </div>
                         <div
-                            class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gold-500 border-4 border-royal-950 rounded-full z-10 flex items-center justify-center order-2 shadow-[0_0_25px_rgba(255,215,0,0.8)]">
+                            class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gold-metallic border-4 border-royal-950 rounded-full z-10 flex items-center justify-center order-2 shadow-[0_0_25px_rgba(255,215,0,0.8)]">
                             <i class="fas fa-heart text-royal-900 text-lg animate-pulse"></i>
                         </div>
                         <div class="w-full md:w-[45%] pl-12 md:pl-12 order-3">
@@ -546,7 +540,7 @@
 
             <div class="container mx-auto px-4 relative z-10">
                 <div
-                    class="max-w-xl mx-auto bg-festival-magenta/90 backdrop-blur-3xl p-8 md:p-12 rounded-2xl gold-border-ornate shadow-[0_0_60px_rgba(0,0,0,0.6)] rsvp-container">
+                    class="max-w-xl mx-auto bg-royal-900/90 backdrop-blur-3xl p-8 md:p-12 rounded-2xl border-2 border-gold-500/30 shadow-[0_0_60px_rgba(0,0,0,0.8)] rsvp-container">
                     <div class="corner-decor corner-tl scale-75 opacity-50"></div>
                     <div class="corner-decor corner-br scale-75 opacity-50"></div>
                     <div class="text-center mb-10">
@@ -559,7 +553,7 @@
                         <div>
                             <label class="block text-gold-400 text-sm uppercase tracking-wider mb-2">Full Name</label>
                             <input type="text" name="Full Name"
-                                class="w-full bg-festival-magenta/50 border-b border-gold-400 text-white px-4 py-3 focus:outline-none focus:border-gold-300 transition-colors placeholder:text-white/40"
+                                class="w-full bg-royal-950/50 border-b border-gold-500/50 text-cream px-4 py-3 focus:outline-none focus:border-gold-400 transition-colors placeholder:text-cream/30"
                                 placeholder="Enter your name" required>
                         </div>
 
@@ -570,7 +564,7 @@
                             <label class="block text-gold-400 text-sm uppercase tracking-wider mb-2">Number of
                                 Guests</label>
                             <select name="Number of Guests"
-                                class="w-full bg-festival-magenta/50 border-b border-gold-400 text-white px-4 py-3 focus:outline-none cursor-pointer">
+                                class="w-full bg-royal-950/50 border-b border-gold-500/50 text-cream px-4 py-3 focus:outline-none cursor-pointer">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
